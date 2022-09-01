@@ -23,6 +23,21 @@ p {
     padding-top: 1px;
 }
 
+.titleDiv{
+  border: 1px solid #2d7eda; 
+  background-color: #2d7eda;
+  height: 50px;
+  margin-bottom: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titleH3{
+  color: white !important;
+}
+
 .fixedHeight{
   height: 200px !important
 }
@@ -151,8 +166,8 @@ table thead {
   border: 1px solid #e69c1b; }
 
 .btn-6 {
-  background: #2d7eda;
-  border: 1px solid #2d7eda; }
+  background: black;
+  border: 1px solid black; }
 
 .btn-7 {
   background: #5638a9;
@@ -530,7 +545,7 @@ table thead {
       width: 100%;
       table-layout: fixed; }
     #mainSection .item-area .item-area-box {
-      height: 61vh;
+      height: 78vh;
       overflow: auto; }
       #mainSection .item-area .item-area-box .px-1 {
         padding: 0rem !important;
@@ -544,7 +559,7 @@ table thead {
       overflow: hidden;
       cursor: pointer; }
       #mainSection .item-area .item-box .img-box {
-        height: 156px; }
+        height: 165px; }
         #mainSection .item-area .item-box .img-box img {
           width: 100%; }
       #mainSection .item-area .item-box .txt-box {
