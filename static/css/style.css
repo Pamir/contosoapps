@@ -38,10 +38,6 @@ p {
   color: white !important;
 }
 
-.fixedHeight{
-  height: 200px !important
-}
-
 .fa {
   font-size: 16px; }
 
@@ -291,7 +287,8 @@ table thead {
 #mainSection {
   position: fixed;
   border-radius: 5px;
-  height: 96vh;
+  height: 1200;
+  width: 1390;
   top: 1.5vh;
   overflow: hidden;
   /*========================================*/
@@ -482,7 +479,7 @@ table thead {
       background: #45c2de;
       border: 1px solid #45c2de; }
   #mainSection .product-area {
-    height: 100%;
+    height: 996px;
     overflow: hidden; }
     #mainSection .product-area .form-control {
       border-left: 0px; }
@@ -528,9 +525,29 @@ table thead {
       padding: 12px 8px;
       overflow: hidden;
       font-weight: 500;
-      color: #000;
+      color:black;
       background: #fabd03;
       border: 1px solid #fabd03; }
+    #mainSection .side-indicator .btn-7 {
+        width: 100%;
+        margin: 1.5px 0;
+        padding: 12px 8px;
+        overflow: hidden;
+        font-weight: 700;
+        color:white;
+        font-size: 15px;
+        background: #5638a9;
+        border: 1px solid #5638a9; }
+      #mainSection .side-indicator .btn-8 {
+          width: 100%;
+          margin: 1.5px 0;
+          padding: 12px 8px;
+          overflow: hidden;
+          font-weight: 700;
+          color:white;
+          font-size: 15px;
+          background: #c64e2c;
+          border: 1px solid #c64e2c; }
     #mainSection .side-indicator .btn:hover,
     #mainSection .side-indicator .btn.active-btn {
       color: #fff;
@@ -545,14 +562,14 @@ table thead {
       width: 100%;
       table-layout: fixed; }
     #mainSection .item-area .item-area-box {
-      height: 78vh;
-      overflow: auto; }
+      overflow: auto; 
+    }
       #mainSection .item-area .item-area-box .px-1 {
         padding: 0rem !important;
         padding: 0 1px !important; }
     #mainSection .item-area .item-box {
       min-width: 131px;
-      margin: 2px 1px;
+      margin: 5px 1px;
       background: #dedfe1;
       border: 1px solid #a6d0e6;
       border-radius: 3px;

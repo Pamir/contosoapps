@@ -9,8 +9,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Video streaming home page."""
-    return render_template('index.html')
+    """Contoso Supermarket home page."""
+    cameras_enabled = True
+    if os.environ.get('CAMERAS_ENABLED'):
+        cameras_enabled = bool(os.environ.get('CAMERAS_ENABLED'))
+    
+    head_title = "Contoso Supermarket"
+    if os.environ.get('HEAD_TITLE'):
+        cameras_enabled = os.environ.get('HEAD_TITLE')
+
+    new_layout = False
+    if os.environ.get('NEW_LAYOUT'):
+        new_layout = os.environ.get('NEW_LAYOUT') == 'True'
+
+    return render_template('index2.html' if new_layout else 'index.html', head_title = head_title, cameras_enabled = cameras_enabled)
 
 @app.route('/addPurchase',methods = ['POST'])
 def addPurchase():
