@@ -12,17 +12,17 @@ def index():
     """Contoso Supermarket home page."""
     cameras_enabled = True
     if os.environ.get('CAMERAS_ENABLED'):
-        cameras_enabled = bool(os.environ.get('CAMERAS_ENABLED'))
+        cameras_enabled = os.environ.get('CAMERAS_ENABLED') == 'True'
     
     head_title = "Contoso Supermarket"
     if os.environ.get('HEAD_TITLE'):
-        cameras_enabled = os.environ.get('HEAD_TITLE')
+        head_title = os.environ.get('HEAD_TITLE')
 
-    new_layout = False
-    if os.environ.get('NEW_LAYOUT'):
-        new_layout = os.environ.get('NEW_LAYOUT') == 'True'
+    new_category = False
+    if os.environ.get('NEW_CATEGORY'):
+        new_category = os.environ.get('NEW_CATEGORY') == 'True'
 
-    return render_template('index2.html' if new_layout else 'index.html', head_title = head_title, cameras_enabled = cameras_enabled)
+    return render_template('index2.html' if new_category else 'index.html', head_title = head_title, cameras_enabled = cameras_enabled)
 
 @app.route('/addPurchase',methods = ['POST'])
 def addPurchase():
@@ -47,8 +47,8 @@ def video_feed(feed):
 def gen_frames(source):
     """Video streaming frame capture function."""
     baseUrl = "rtsp://localhost:554/media/" 
-    if os.environ.get('RTSP_BASEURL'):
-        baseUrl = str(os.environ['RTSP_BASEURL'])
+    if os.environ.get('CAMERAS_BASEURL'):
+        baseUrl = str(os.environ['CAMERAS_BASEURL'])
 
     cap = cv2.VideoCapture(baseUrl + source)  # capture the video from the live feed
 

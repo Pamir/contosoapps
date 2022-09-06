@@ -12,11 +12,14 @@
       "module": "flask",
       "env": {
         "FLASK_APP": "app.py",
-        "SQL_HOST": "contososupermarket.mysql.database.azure.com",
-        "SQL_USERNAME": "aksiot",
-        "SQL_PASSWORD": "Test123!",
-        "SQL_DATABASE": "contososupermarket",
-        "NEW_LAYOUT" : "True"
+        "SQL_HOST": "",
+        "SQL_USERNAME": "",
+        "SQL_PASSWORD": "",
+        "SQL_DATABASE": "",
+        "HEAD_TITLE" : "Buenas",
+        "CAMERAS_ENABLED" : "True",
+        "CAMERAS_BASEURL" : "",
+        "NEW_CATEGORY" : "False"
       },
       "args": [
         "run",
