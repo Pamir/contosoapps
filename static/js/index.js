@@ -4,6 +4,8 @@ $( document ).ready(function() {
 });
 
 function addPurchase(productId) {
+    return;
+
     $.ajax({
         type: "POST",
         url: "/addPurchase",

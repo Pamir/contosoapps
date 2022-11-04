@@ -15,15 +15,15 @@
   </head>
   <body>
 
-    <!-- ============================== ALERT SECTION START ============================== -->
-   <div class="alert alert-success" style="z-index:1" id="success-alert">
+   <!-- ============================== ALERT SECTION START ============================== -->
+   <!-- <div class="alert alert-success" style="z-index:1" id="success-alert">
       <button type="button" class="close" data-dismiss="alert">x</button>
       <strong>Success! </strong> Product purchased.
    </div>
    <div class="alert alert-danger" style="z-index:1" id="error-alert">
       <button type="button" class="close" data-dismiss="alert">x</button>
       <strong>Error! </strong> Failed to commit purchase transaction.
-   </div>
+   </div> -->
 
     <!-- ============================== MAIN SECTION START ============================== -->
    <section id="mainSection">
@@ -48,9 +48,14 @@
 
        <!-- ============================== PRODUCT AREA START ============================== -->
        <div id="productArea" class="col-md-9 px-1">
-        <div class="top-area-title titleDiv">
-            <h3 class="titleH3">{{ head_title }}</h3>
-        </div>
+         <div class="row" style="background-color: #2d7eda; margin-left:5px; margin-bottom: 3px">
+            <div clas="col-md-4">
+               <img src="{{ url_for('static',filename='img/contoso.png') }}"/>
+            </div>
+            <div clas="col-md-8">
+               <h3 class="titleH3">{{ head_title }}</h3>
+            </div>
+         </div>
         <div class="bottom-area-btns">
           <button class="btn btn-1 calculator-btn" type="button"><i class="fa fa-calculator"></i> Calculator</button>
           <button class="btn btn-green" type="button" data-toggle="modal" data-target="#"><i class="fa fa-keyboard-o"></i> Keyboard</button>
@@ -82,13 +87,10 @@
                    <button class="btn" type="button">Grains</button>
                    <button class="btn" type="button">Dairy</button>
                    <button class="btn" type="button">Frozen Food</button>
-                   <button class="btn" type="button">Prepared Food</button>
-                   <button class="btn" type="button">Canned Goods</button>
                    <button class="btn" type="button">Snacks</button>
                    <button class="btn" type="button">Toiletries</button>
                    <button class="btn" type="button">Body Care</button>
                    <button class="btn" type="button">Beauty</button>
-                   <button class="btn" type="button">Home Goods</button>
                    <button class="btn" type="button">Others</button>
                 </div>
                 <div class="item-area">
@@ -123,7 +125,7 @@
                                <img onclick="addPurchase(1)" src="{{ url_for('static',filename='img/product1.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="txt-box item-name">
-                               <span>Red Apple</span>
+                               <span><b>Red Apple</b></span>
                             </div>
                          </div>
                       </div>
@@ -136,7 +138,7 @@
                                <img onclick="addPurchase(2)" src="{{ url_for('static',filename='img/product2.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="txt-box item-name">
-                               <span>Banana</span>
+                               <span><b>Banana</b></span>
                             </div>
                          </div>
                       </div>
@@ -149,7 +151,7 @@
                                <img onclick="addPurchase(11)" src="{{ url_for('static',filename='img/product11.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="txt-box item-name">
-                               <span>Strawberry</span>
+                               <span><b>Strawberry</b></span>
                             </div>
                          </div>
                       </div>
@@ -162,7 +164,7 @@
                               <img onclick="addPurchase(10)" src="{{ url_for('static',filename='img/product10.jpg') }}" class="img-fluid" alt="">
                            </div>
                            <div class="txt-box item-name">
-                              <span>Tomato</span>
+                              <span><b>Tomato</b></span>
                            </div>
                         </div>
                      </div>
@@ -175,7 +177,7 @@
                               <img onclick="addPurchase(8)" src="{{ url_for('static',filename='img/product8.jpg') }}" class="img-fluid" alt="">
                            </div>
                            <div class="txt-box item-name">
-                              <span>Red bell pepper</span>
+                              <span><b>Red bell pepper</b></span>
                            </div>
                         </div>
                      </div>
@@ -188,7 +190,7 @@
                               <img onclick="addPurchase(9)" src="{{ url_for('static',filename='img/product9.jpg') }}" class="img-fluid" alt="">
                            </div>
                            <div class="txt-box item-name">
-                              <span>Lettuce</span>
+                              <span><b>Lettuce</b></span>
                            </div>
                         </div>
                      </div>
@@ -201,7 +203,7 @@
                               <img onclick="addPurchase(6)" src="{{ url_for('static',filename='img/product6.jpg') }}" class="img-fluid" alt="">
                            </div>
                            <div class="txt-box item-name">
-                              <span>Orange juice</span>
+                              <span><b>Orange juice</b></span>
                            </div>
                         </div>
                      </div>
@@ -214,7 +216,7 @@
                                <img onclick="addPurchase(5)" src="{{ url_for('static',filename='img/product5.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="txt-box item-name">
-                               <span>Milk</span>
+                               <span><b>Milk</b></span>
                             </div>
                          </div>
                       </div>
@@ -227,7 +229,7 @@
                               <img onclick="addPurchase(12)" src="{{ url_for('static',filename='img/product12.jpg') }}" class="img-fluid" alt="">
                            </div>
                            <div class="txt-box item-name">
-                              <span>Eggs</span>
+                              <span><b>Eggs</b></span>
                            </div>
                         </div>
                      </div>
@@ -240,7 +242,7 @@
                               <img onclick="addPurchase(4)" src="{{ url_for('static',filename='img/product4.jpg') }}" class="img-fluid" alt="">
                            </div>
                            <div class="txt-box item-name">
-                              <span>Bread</span>
+                              <span><b>Bread</b></span>
                            </div>
                         </div>
                      </div>
@@ -253,7 +255,7 @@
                               <img onclick="addPurchase(7)" src="{{ url_for('static',filename='img/product7.jpg') }}" class="img-fluid" alt="">
                            </div>
                            <div class="txt-box item-name">
-                              <span>Chips</span>
+                              <span><b>Chips</b></span>
                            </div>
                         </div>
                      </div>
@@ -266,7 +268,7 @@
                               <img onclick="addPurchase(3)" src="{{ url_for('static',filename='img/product3.jpg') }}" class="img-fluid" alt="">
                            </div>
                            <div class="txt-box item-name">
-                              <span>Avocado</span>
+                              <span><b>Avocado</b></span>
                            </div>
                         </div>
                      </div>

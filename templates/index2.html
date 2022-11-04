@@ -18,22 +18,44 @@
 <body>
 
    <!-- ============================== ALERT SECTION START ============================== -->
-   <div class="alert alert-success" style="z-index:1" id="success-alert">
+   <!-- <div class="alert alert-success" style="z-index:1" id="success-alert">
       <button type="button" class="close" data-dismiss="alert">x</button>
       <strong>Success! </strong> Product purchased.
    </div>
    <div class="alert alert-danger" style="z-index:1" id="error-alert">
       <button type="button" class="close" data-dismiss="alert">x</button>
       <strong>Error! </strong> Failed to commit purchase transaction.
-   </div>
+   </div> -->
 
    <!-- ============================== MAIN SECTION START ============================== -->
    <section id="mainSection">
       <div class="row mx-0">
+         <!-- ============================== CAMERAS SECTION START ============================== -->
+         {% if cameras_enabled %}
+         <div id="cameraArea" class="col-md-3 px-1">
+            <div class="row">
+            <img class="imgVideo" src="{{ url_for('video_feed', feed='1.mkv') }}">
+            </div>
+            <div class="row">
+            <img class="imgVideo" src="{{ url_for('video_feed', feed='2.mkv') }}">
+            </div>
+            <div class="row">
+            <img class="imgVideo" src="{{ url_for('video_feed', feed='3.mkv') }}">
+            </div>
+            <div class="row">
+            <img class="imgVideo" src="{{ url_for('video_feed', feed='4.mkv') }}">
+            </div>
+         </div>
+         {% endif %}
          <!-- ============================== PRODUCT AREA START ============================== -->
-         <div id="productArea" class="col-md-12 px-1">
-            <div class="top-area-title titleDiv">
-               <h3 class="titleH3">{{ head_title }}</h3>
+         <div id="productArea" class="col-md-9 px-1">
+            <div class="row" style="background-color: #2d7eda; margin-left:5px; margin-bottom: 3px">
+               <div clas="col-md-4">
+                  <img src="{{ url_for('static',filename='img/contoso.png') }}"/>
+               </div>
+               <div clas="col-md-8">
+                  <h3 class="titleH3">{{ head_title }}</h3>
+               </div>
             </div>
             <div class="product-area">
                <div class="accesories">
@@ -72,7 +94,7 @@
                                     class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Red Apple</span>
+                                 <span><b>Red Apple</b></span>
                               </div>
                            </div>
                         </div>
@@ -86,7 +108,7 @@
                                     class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Banana</span>
+                                 <span><b>Banana</b></span>
                               </div>
                            </div>
                         </div>
@@ -100,7 +122,7 @@
                                     src="{{ url_for('static',filename='img/product11.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Strawberry</span>
+                                 <span><b>Strawberry</b></span>
                               </div>
                            </div>
                         </div>
@@ -114,7 +136,7 @@
                                     src="{{ url_for('static',filename='img/product13.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Lemon</span>
+                                 <span><b>Lemon</b></span>
                               </div>
                            </div>
                         </div>
@@ -128,7 +150,7 @@
                                     src="{{ url_for('static',filename='img/product10.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Tomato</span>
+                                 <span><b>Tomato</b></span>
                               </div>
                            </div>
                         </div>
@@ -142,7 +164,7 @@
                                     class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Red bell pepper</span>
+                                 <span><b>Red bell pepper</b></span>
                               </div>
                            </div>
                         </div>
@@ -156,7 +178,7 @@
                                     class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Lettuce</span>
+                                 <span><b>Lettuce</b></span>
                               </div>
                            </div>
                         </div>
@@ -170,7 +192,7 @@
                                     class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Avocado</span>
+                                 <span><b>Avocado</b></span>
                               </div>
                            </div>
                         </div>
@@ -184,7 +206,7 @@
                                     class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Orange juice</span>
+                                 <span><b>Orange juice</b></span>
                               </div>
                            </div>
                         </div>
@@ -198,7 +220,7 @@
                                     class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Milk</span>
+                                 <span><b>Milk</b></span>
                               </div>
                            </div>
                         </div>
@@ -212,7 +234,7 @@
                                     src="{{ url_for('static',filename='img/product12.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Eggs</span>
+                                 <span><b>Eggs</b></span>
                               </div>
                            </div>
                         </div>
@@ -226,7 +248,7 @@
                                     src="{{ url_for('static',filename='img/product14.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Yogurt</span>
+                                 <span><b>Yogurt</b></span>
                               </div>
                            </div>
                         </div>
@@ -240,7 +262,7 @@
                                     src="{{ url_for('static',filename='img/product15.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Wood helicopter</span>
+                                 <span><b>Wood helicopter</b></span>
                               </div>
                            </div>
                         </div>
@@ -254,7 +276,7 @@
                                     src="{{ url_for('static',filename='img/product16.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Magnetic letters</span>
+                                 <span><b>Magnetic letters</b></span>
                               </div>
                            </div>
                         </div>
@@ -268,7 +290,7 @@
                                     src="{{ url_for('static',filename='img/product17.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>RoboCat</span>
+                                 <span><b>Baseball bat</b></span>
                               </div>
                            </div>
                         </div>
@@ -282,7 +304,7 @@
                                     src="{{ url_for('static',filename='img/product18.jpg') }}" class="img-fluid" alt="">
                               </div>
                               <div class="txt-box item-name">
-                                 <span>Baseball ball</span>
+                                 <span><b>Baseball</b></span>
                               </div>
                            </div>
                         </div>
@@ -299,12 +321,10 @@
                      <button class="btn btn-7" type="button">Bread/Grains</button>
                      <button class="btn btn-7" type="button">Dairy</button>
                      <button class="btn btn-7" type="button">Frozen Food</button>
-                     <button class="btn btn-7" type="button">Prepared Food</button>
                      <button class="btn btn-7" type="button">Canned Goods</button>
                      <button class="btn btn-7" type="button">Snacks</button>
                      <button class="btn btn-7" type="button">Body Care</button>
                      <button class="btn btn-7" type="button">Beauty</button>
-                     <button class="btn btn-7" type="button">Home Goods</button>
                      <button class="btn btn-7" type="button">Others</button>
                      <button class="btn btn-8" type="button">Toys</button>
                      <button class="btn btn-8" type="button">Video Games</button>

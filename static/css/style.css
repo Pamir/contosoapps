@@ -17,6 +17,10 @@ h5, p, span, a, .btn, th, td, label {
 p {
   margin-bottom: 0 !important; }
 
+span {
+    font-size: 19px;
+}
+
 .imgVideo {
     width: 100%;
     padding-right: 10px;
@@ -26,7 +30,7 @@ p {
 .titleDiv{
   border: 1px solid #2d7eda; 
   background-color: #2d7eda;
-  height: 50px;
+  height: 40px;
   margin-bottom: 5px;
   text-align: center;
   display: flex;
@@ -36,6 +40,8 @@ p {
 
 .titleH3{
   color: white !important;
+  margin-left: 200px;
+  margin-top: 10px;
 }
 
 .fa {
@@ -448,7 +454,7 @@ table thead {
     min-width: 90px;
     margin: 0 1px;
     padding: 12px 0;
-    height: 80px;
+    height: 60px;
     color: #fff; }
     #mainSection .bottom-area-btns .btn .fa {
       display: block;
@@ -525,6 +531,7 @@ table thead {
       padding: 12px 8px;
       overflow: hidden;
       font-weight: 500;
+      font-size: 18px;
       color:black;
       background: #fabd03;
       border: 1px solid #fabd03; }
@@ -533,9 +540,9 @@ table thead {
         margin: 1.5px 0;
         padding: 12px 8px;
         overflow: hidden;
-        font-weight: 700;
+        font-weight: 500;
         color:white;
-        font-size: 15px;
+        font-size: 19px !important;
         background: #5638a9;
         border: 1px solid #5638a9; }
       #mainSection .side-indicator .btn-8 {
@@ -543,9 +550,9 @@ table thead {
           margin: 1.5px 0;
           padding: 12px 8px;
           overflow: hidden;
-          font-weight: 700;
+          font-weight: 500;
           color:white;
-          font-size: 15px;
+          font-size: 19px !important;
           background: #c64e2c;
           border: 1px solid #c64e2c; }
     #mainSection .side-indicator .btn:hover,
@@ -580,7 +587,7 @@ table thead {
         #mainSection .item-area .item-box .img-box img {
           width: 100%; }
       #mainSection .item-area .item-box .txt-box {
-        padding: 5px 10px; }
+        padding: 1px 10px; }
       #mainSection .item-area .item-box .txt-box.item-name {
         display: inline-block; }
         #mainSection .item-area .item-box .txt-box.item-name span {
